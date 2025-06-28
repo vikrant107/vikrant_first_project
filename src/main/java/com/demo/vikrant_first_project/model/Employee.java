@@ -8,7 +8,7 @@ import jakarta.persistence.Entity;
 
 @Data
 @Entity
-@Table(name="employee001")
+@Table(name = "employee001")
 public class Employee {
     @Id// it will create primary key
     @GeneratedValue// it will create Auto increment field
