@@ -19,7 +19,7 @@ public class EmployeeServiceImpl implements Employeeservice{
 
     @Override
     public Employee getById(Integer id) {
-        return null;
+        return employeeRepository.findById(id).orElse(null);
     }
 
     @Override
