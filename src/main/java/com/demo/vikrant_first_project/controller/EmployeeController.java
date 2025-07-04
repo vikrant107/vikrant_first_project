@@ -29,4 +29,12 @@ public class EmployeeController {
     public List<Employee> getAllReord(){
         return employeeservice.getAll();
     }
+    @GetMapping("get_employee/{id}")
+    public Employee getRecordById(@PathVariable Integer id){
+        return employeeservice.getById(id);
+    }
+    @DeleteMapping("delete_employee/{id}")
+    public Employee delete(@PathVariable Integer id){
+        return employeeservice.delete(id);
+    }
 }

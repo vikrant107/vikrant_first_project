@@ -19,7 +19,7 @@ public class EmployeeServiceImpl implements Employeeservice{
 
     @Override
     public Employee getById(Integer id) {
-        return null;
+        return employeeRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -27,4 +27,10 @@ public class EmployeeServiceImpl implements Employeeservice{
         employeeRepository.save(e);
         return e;
     }
+@Override
+    public Employee delete(Integer id){
+    Employee emp=employeeRepository.findById(id).orElse(null);
+         employeeRepository.delete(emp);
+         return emp;
+}
 }
